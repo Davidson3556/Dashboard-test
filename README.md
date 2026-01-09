@@ -1,36 +1,176 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GoodFood - Ordering Management Dashboard
 
-## Getting Started
+A modern, high-performance food ordering management dashboard built with Next.js 16 and React 19. Manage revenues, orders, and customer ratings with a seamless, responsive interface.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16.1-black)
+![React](https://img.shields.io/badge/React-19.2-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🔗 Demo Links
+
+- **Live Demo:** [goodfood-test.vercel.app](https://goodfood-test.vercel.app)
+- **GitHub Repository:** [View Code](https://github.com/Davidson3556/Dashboard-test)
+
+---
+
+## ✨ Features
+
+### Core Functionality
+
+- **Revenue Analytics** - Interactive bar charts showing weekly sales performance with percentage comparisons.
+- **Order Time Distribution** - Visual breakdown of peak order times (Morning, Afternoon, Evening) using donut charts.
+- **Customer Ratings** - Detailed rating circles for Food Taste, Hygiene, and Packaging.
+- **Order Management** - Real-time tracking of most ordered items and overall order trends.
+- **Splash Screen** - Branded loading experience with smooth transitions.
+
+### User Experience
+
+- **Premium UI/UX** - Clean, professional interface with Figma-aligned design and soft colors.
+- **Responsive Navigation** - Slide-out drawer menu for mobile users with an intuitive hamburger toggle.
+- **Interactive Charts** - Responsive containers and tooltips using Recharts for data visualization.
+- **Fast Performance** - Optimized with Next.js App Router and Tailwind CSS 4.
+- **Accessibility** - Semantic HTML and ARIA-compliant UI components from Radix UI.
+
+### Coming Soon
+
+- Live Orders Feed
+- Detailed Customer Feedback analytics
+- Multi-restaurant support
+
+## 🛠️ Tech Stack
+
+| Technology         | Purpose                                          |
+| ------------------ | ------------------------------------------------ |
+| **Next.js 16**     | React framework with App Router                  |
+| **React 19**       | UI library                                       |
+| **TypeScript**     | Type safety                                      |
+| **Tailwind CSS 4** | Utility-first styling                            |
+| **Radix UI**       | Accessible UI primitives (Dropdowns, Separators) |
+| **Lucide React**   | Icon library                                     |
+| **Recharts**       | Data visualization (Bar, Pie, Line charts)       |
+
+## 📁 Project Structure
+
+```
+├── app/
+│   ├── globals.css          # Global styles & Tailwind 4 configuration
+│   ├── layout.tsx           # Root layout with fonts & metadata
+│   ├── page.tsx             # Main Dashboard page with layout & cards
+│   └── loading.tsx          # Default loading state
+├── components/
+│   ├── cards/               # Dashboard-specific chart components
+│   │   ├── RevenueCard.tsx      # Bar chart for revenue
+│   │   ├── OrderTimeCard.tsx    # Pie chart for order distribution
+│   │   ├── RatingCard.tsx       # Custom rating circles
+│   │   ├── MostOrderedCard.tsx  # Top food items list
+│   │   └── OrderCard.tsx        # Line chart for order trends
+│   ├── ui/                  # Reusable UI components (Shadcn/UI)
+│   ├── Sidebar.tsx          # Navigation sidebar with mobile drawer
+│   └── TopNav.tsx           # Top navigation with search and profile
+├── lib/
+│   └── utils.ts             # General utility functions
+└── public/
+    ├── icons/               # Feature-specific icons (Order, Review, etc.)
+    └── Logo.png             # Main branding logo
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+- Node.js 18+
+- npm or yarn
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/Davidson3556/Dashboard-test.git
+   cd Dashboard-test
+   ```
 
-## Deploy on Vercel
+2. **Install dependencies**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Run the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+## 📜 Available Scripts
+
+| Command         | Description              |
+| --------------- | ------------------------ |
+| `npm run dev`   | Start development server |
+| `npm run build` | Build for production     |
+| `npm run start` | Start production server  |
+| `npm run lint`  | Run ESLint               |
+
+---
+
+## 🔄 Dashboard Architecture
+
+```mermaid
+graph TD
+    A[Root Layout] --> B[Sidebar]
+    A --> C[Top Navigation]
+    A --> D[Main Dashboard Content]
+    D --> E[Revenue Section]
+    D --> F[Order Time Section]
+    D --> G[Rating/Stats Section]
+```
+
+### Dashboard Layout
+
+- **Sidebar**: Fixed on desktop, toggleable drawer on mobile.
+- **TopNav**: Full-width search and profile management.
+- **Main Content**: Responsive grid that adapts from 1 column on mobile to 3 columns on large screens.
+
+---
+
+## 💭 Design Decisions
+
+| Decision                | Rationale                                                                 |
+| ----------------------- | ------------------------------------------------------------------------- |
+| **Shadcn UI**           | Chose for its accessibility and clean, customizable primitives.           |
+| **Recharts**            | Used for its excellent React integration and responsive chart containers. |
+| **Client Side State**   | Managed sidebar and loading states efficiently using React hooks.         |
+| **Vertical Separators** | Implemented using Shadcn Separator for precise Figma-aligned dividers.    |
+
+---
+
+## 🎨 Design System
+
+### Colors
+
+| Color      | Hex       | Usage                   |
+| ---------- | --------- | ----------------------- |
+| Primary    | `#5A6ACF` | Active states, branding |
+| Heading    | `#1F384C` | Dashboard title, text   |
+| Separator  | `#C8CBD9` | Dividers and borders    |
+| Background | `#F1F2F7` | Sidebar/Page background |
+
+### Typography
+
+- **Poppins** - Clean, modern font for a professional dashboard feel.
+
+---
+
+
+
+This project was created as part of a frontend assessment.

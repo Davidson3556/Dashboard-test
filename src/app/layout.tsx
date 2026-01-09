@@ -9,8 +9,12 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "GoodFood Dashboard",
-  description: "Food ordering management dashboard",
+  title: "GoodFood - Dashboard",
+  description: "Advanced ordering management dashboard for GoodFood",
+  icons: {
+    icon: "/Logo.png",
+    apple: "/Logo.png",
+  },
 };
 
 export default function RootLayout({
