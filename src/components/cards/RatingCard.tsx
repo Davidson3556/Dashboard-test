@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { CardContent, CardHeader } from "@/components/ui/card";
 
 interface RatingCircleProps {
   value: number;
@@ -94,7 +94,7 @@ function RatingCircle({
 
 export function RatingCard() {
   return (
-    <Card className="shadow-sm border-gray-100">
+    <div>
       <CardHeader className="pb-2">
         <p className="text-[14px] font-normal tracking-[0.5px] text-[#000000]">Your Rating</p>
         <p className="text-[12px] font-normal tracking-[0.5px] text-[#000000]/50">Lorem ipsum dolor sit amet, consectetur</p>
@@ -142,6 +142,6 @@ export function RatingCard() {
           />
         </div>
       </CardContent>
-    </Card>
+    </div>
   );
 }

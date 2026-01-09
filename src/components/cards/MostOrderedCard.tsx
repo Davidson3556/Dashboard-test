@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
 
 const foodItems = [
@@ -28,7 +28,7 @@ const foodItems = [
 
 export function MostOrderedCard() {
   return (
-    <Card className="shadow-sm border-gray-100">
+    <div>
       <CardHeader className="pb-2">
         <p className="text-[14px] font-normal tracking-[0.5px] text-[#000000]">Most Ordered Food</p>
         <p className="text-[12px] font-normal tracking-[0.5px] text-[#000000]/50">Adipiscing elit, sed do eiusmod tempor</p>
@@ -77,6 +77,6 @@ export function MostOrderedCard() {
           ))}
         </div>
       </CardContent>
-    </Card>
+    </div>
   );
 }

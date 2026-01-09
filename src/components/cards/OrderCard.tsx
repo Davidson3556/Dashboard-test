@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { CardContent, CardHeader } from "@/components/ui/card";
 import {
   LineChart,
   Line,
@@ -23,7 +23,7 @@ const data = [
 
 export function OrderCard() {
   return (
-    <Card className="shadow-sm border-gray-100">
+    <div>
       <CardHeader className="flex flex-row items-start justify-between pb-2">
         <div>
           <p 
@@ -153,6 +153,6 @@ export function OrderCard() {
           </div>
         </div>
       </CardContent>
-    </Card>
+    </div>
   );
 }
