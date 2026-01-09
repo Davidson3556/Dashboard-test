@@ -80,11 +80,11 @@ export function OrderTimeCard() {
             
             {activeData && (
               <div 
-                className="absolute left-[110px] w-[140px] h-[109px] bg-[#37375C] rounded-lg flex flex-col items-center justify-center text-center z-10"
+                className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] w-[120px] h-[90px] bg-[#37375C]/95 rounded-lg flex flex-col items-center justify-center text-center z-10 pointer-events-none"
               >
-                <p className="text-[12px] font-medium tracking-[0.3px] text-white">{activeData.name}</p>
-                <p className="text-[12px] font-normal tracking-[0.3px] text-white/50">{activeData.timeRange}</p>
-                <p className="text-[16px] font-semibold text-white mt-1">{activeData.orders.toLocaleString()} orders</p>
+                <p className="text-[10px] font-medium tracking-[0.3px] text-white">{activeData.name}</p>
+                <p className="text-[10px] font-normal tracking-[0.3px] text-white/50">{activeData.timeRange}</p>
+                <p className="text-[14px] font-semibold text-white mt-1">{activeData.orders.toLocaleString()}</p>
               </div>
             )}
           </div>

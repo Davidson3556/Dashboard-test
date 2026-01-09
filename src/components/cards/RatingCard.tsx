@@ -99,8 +99,8 @@ export function RatingCard() {
         <p className="text-[14px] font-normal tracking-[0.5px] text-[#000000]">Your Rating</p>
         <p className="text-[12px] font-normal tracking-[0.5px] text-[#000000]/50">Lorem ipsum dolor sit amet, consectetur</p>
       </CardHeader>
-      <CardContent className="pt-2">
-        <div style={{ position: 'relative', width: 260, height: 180 }}>
+      <CardContent className="pt-2 flex justify-center lg:justify-start">
+        <div className="scale-75 sm:scale-90 lg:scale-100 origin-top-left lg:origin-center relative" style={{ width: 260, height: 180 }}>
           <RatingCircle
             value={85}
             label="Food Taste"

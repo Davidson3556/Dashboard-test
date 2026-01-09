@@ -16,26 +16,26 @@ interface TopNavProps {
 export function TopNav({ onMenuClick }: TopNavProps) {
   return (
     <header className="h-16 bg-white flex items-center justify-between px-4 lg:px-6">
-      <div className="flex items-center gap-4 flex-1">
+      <div className="flex items-center gap-2 lg:gap-4 flex-1 min-w-0">
         <button 
           onClick={onMenuClick}
-          className="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
+          className="lg:hidden p-1.5 hover:bg-gray-100 rounded-lg transition-colors shrink-0"
         >
-          <Menu className="w-6 h-6 text-[#1F384C]" />
+          <Menu className="w-5 h-5 text-[#1F384C]" />
         </button>
 
-        <div className="relative flex-1 lg:flex-none">
+        <div className="relative flex-1 max-w-[625px]">
           <input
             type="text"
             placeholder="Search"
-            className="w-full lg:w-[625px] h-[32px] pl-4 pr-10 bg-[#F6F6FB] rounded-[5px] text-[12px] font-normal tracking-[0.5px] placeholder:text-[#1F384C]/30 text-[#1F384C] outline-none border-none"
+            className="w-full h-[32px] pl-3 pr-8 bg-[#F6F6FB] rounded-[5px] text-[12px] font-normal tracking-[0.5px] placeholder:text-[#1F384C]/30 text-[#1F384C] outline-none border-none transition-all"
           />
           <Image
             src="/icons/search.svg"
             alt="Search"
-            width={12}
-            height={12}
-            className="absolute right-4 top-1/2 -translate-y-1/2 opacity-50"
+            width={10}
+            height={10}
+            className="absolute right-3 top-1/2 -translate-y-1/2 opacity-50"
           />
         </div>
       </div>
@@ -79,6 +79,7 @@ export function TopNav({ onMenuClick }: TopNavProps) {
           />
         </div>
       </div>
+      
     </header>
   );
 }

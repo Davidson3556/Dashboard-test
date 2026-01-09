@@ -52,12 +52,13 @@ export function RevenueCard() {
       </CardHeader>
       <CardContent className="pt-0">
         <ResponsiveContainer width="100%" height={180}>
-          <BarChart data={data} barGap={6} barCategoryGap="20%">
+          <BarChart data={data} barGap={4} barCategoryGap="15%">
             <XAxis
               dataKey="day"
               axisLine={{ stroke: "#E2E7E7", strokeWidth: 1 }}
               tickLine={false}
-              tick={{ fontSize: 12, fill: "#9CA3AF" }}
+              tick={{ fontSize: 10, fill: "#9CA3AF" }}
+              interval={0}
             />
             <YAxis hide domain={[0, 120]} ticks={[40, 80, 120]} />
             <CartesianGrid 
@@ -75,11 +76,11 @@ export function RevenueCard() {
                 color: "#fff",
               }}
             />
-            <Bar dataKey="current" fill="#5A6ACF" radius={0} barSize={8} />
-            <Bar dataKey="previous" fill="#E6E8EC" radius={0} barSize={8} />
+            <Bar dataKey="current" fill="#5A6ACF" radius={0} />
+            <Bar dataKey="previous" fill="#E6E8EC" radius={0} />
           </BarChart>
         </ResponsiveContainer>
-        <div className="flex items-center gap-6 mt-4">
+        <div className="flex flex-wrap items-center gap-4 lg:gap-6 mt-4">
           <div className="flex items-center gap-2">
             <div className="w-[9px] h-[9px] rounded-full bg-[#5A6ACF]" />
             <span className="text-[12px] font-normal tracking-[0.5px] text-[#121212]/70">Last 6 days</span>

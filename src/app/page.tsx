@@ -55,6 +55,7 @@ export default function Dashboard() {
 
       <div className="ml-0 lg:ml-[240px]">
         <TopNav onMenuClick={() => setIsSidebarOpen(true)} />
+                <Separator className="bg-[#C8CBD9]" />
 
         <main className="p-4 lg:p-6">
           <h1 className="text-[18px] font-medium tracking-[0.5px] text-[#1F384C] mb-6">Dashboard</h1>
@@ -62,9 +63,11 @@ export default function Dashboard() {
           <div className="flex flex-col lg:flex-row mb-6">
             <div className="flex-1 lg:flex-[2] pt-6">
               <RevenueCard />
-
             </div>
-            <div className="flex-1 pt-6">
+            
+            <Separator className="lg:hidden bg-[#C8CBD9] my-6" />
+
+            <div className="flex-1 lg:pt-6">
               <OrderTimeCard />
             </div>
           </div>
@@ -76,16 +79,18 @@ export default function Dashboard() {
               <RatingCard />
             </div>
             
-            <div className="relative flex">
+            <div className="relative flex flex-col md:flex-row">
+              <Separator className="md:hidden bg-[#C8CBD9] my-6" />
               <Separator orientation="vertical" className="hidden md:block bg-[#C8CBD9]" />
-              <div className="flex-1 border-t md:border-t-0 border-[#C8CBD9] pt-6">
+              <div className="flex-1 md:border-t-0 pt-6 md:pt-6">
                 <MostOrderedCard />
               </div>
             </div>
 
-            <div className="relative flex md:col-span-2 lg:col-span-1">
+            <div className="relative flex flex-col lg:flex-row md:col-span-2 lg:col-span-1">
+              <Separator className="lg:hidden bg-[#C8CBD9] my-6" />
               <Separator orientation="vertical" className="hidden lg:block bg-[#C8CBD9]" />
-              <div className="flex-1 border-t lg:border-t-0 border-[#C8CBD9] pt-6">
+              <div className="flex-1 lg:border-t-0 pt-6 lg:pt-6">
                 <OrderCard />
               </div>
             </div>
